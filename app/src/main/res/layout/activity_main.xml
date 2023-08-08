@@ -24,10 +24,9 @@
                 android:id="@+id/toolbar_main"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:background="@color/blue"
+                android:background="@color/light_blue_v2"
                 android:elevation="4dp"
-                android:popupTheme="@style/Theme.GOATHabits"
-                app:titleTextColor="@color/white" />
+                android:popupTheme="@style/Theme.GOATHabits" />
 
             <FrameLayout
                 android:id="@+id/fragment_conainer"

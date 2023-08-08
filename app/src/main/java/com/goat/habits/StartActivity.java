@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.goat.habits.databinding.ActivityStartBinding;
+import com.goat.habits.preferences.UserPreferences;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -23,10 +24,12 @@ public class StartActivity extends AppCompatActivity {
 
         binding.buttonNext.setOnClickListener(v -> {
 
-            if (TextUtils.isEmpty(binding.editName.getText())){
+            if (TextUtils.isEmpty(binding.editName.getText())) {
                 binding.editName.setError("Nome não pode estar vazio!");
-            } else{
-                startActivity(new Intent(this, MainActivity.class));
+            } else {
+                Toast.makeText(this, "Salvo com sucesso!", Toast.LENGTH_SHORT).show();
+                new UserPreferences(this).setPreference("NAME", binding.editName.getText().toString());
+                finish();
             }
         });
 

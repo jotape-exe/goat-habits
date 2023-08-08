@@ -12,7 +12,6 @@
         android:id="@+id/logo_goat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:src="@mipmap/ic_launcher_round"
         app:layout_constraintBottom_toTopOf="@+id/textWelcome"
         app:layout_constraintEnd_toEndOf="@+id/textWelcome"

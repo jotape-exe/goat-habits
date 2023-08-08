@@ -11,17 +11,14 @@ public class HabitModel {
     private Long id;
     private String name;
     private String description;
-    @ColumnInfo(name = "meta_daily")
-    private int metaDaily;
     private String frequency;
     @ColumnInfo(name = "start_date")
     private String startDate;
 
-    public HabitModel(long id, String name, String description, int metaDaily, String frequency, String startDate) {
+    public HabitModel(Long id, String name, String description, String frequency, String startDate) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.metaDaily = metaDaily;
         this.frequency = frequency;
         this.startDate = startDate;
     }
@@ -48,14 +45,6 @@ public class HabitModel {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getMetaDaily() {
-        return metaDaily;
-    }
-
-    public void setMetaDaily(int metaDaily) {
-        this.metaDaily = metaDaily;
     }
 
     public String getFrequency() {
