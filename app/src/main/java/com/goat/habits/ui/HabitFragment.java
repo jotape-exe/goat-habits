@@ -14,8 +14,7 @@ public class HabitFragment extends Fragment {
     FragmentHabitBinding binding;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentHabitBinding.inflate(inflater, container, false);
 
