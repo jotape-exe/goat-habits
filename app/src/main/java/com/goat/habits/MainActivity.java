@@ -1,16 +1,11 @@
 package com.goat.habits;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.goat.habits.databinding.ActivityMainBinding;
 import com.goat.habits.ui.AchievementsFragment;
@@ -67,9 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private Boolean switchFragment(Fragment fragment){
+    private void switchFragment(Fragment fragment){
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_conainer, fragment).commit();
-        return true;
     }
 
 }
