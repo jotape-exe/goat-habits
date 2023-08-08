@@ -1,9 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.GOATHabits" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue_v3</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+
+        <item name="colorSecondary">@color/blue_v2</item>
+        <item name="colorSecondaryVariant">@color/light_blue</item>
+
+        <item name="android:statusBarColor">@color/dark_blue</item>
+
     </style>
 
     <style name="Theme.GOATHabits" parent="Base.Theme.GOATHabits" />
+
+    <style name="Theme.GOATHabits.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.GOATHabits.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.GOATHabits.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
