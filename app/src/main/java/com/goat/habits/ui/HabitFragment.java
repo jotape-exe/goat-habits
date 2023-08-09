@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.goat.habits.databinding.FragmentHabitBinding;
+import com.goat.habits.preferences.UserPreferences;
 import com.goat.habits.ui.adapter.HabitAdapter;
 import com.goat.habits.ui.listener.HabitListener;
 import com.goat.habits.viewmodel.HabitFragmentViewModel;
@@ -49,6 +50,11 @@ public class HabitFragment extends Fragment {
             public void onLongClick(Long id) {
                 Bundle bundle = new Bundle();
                 bundle.putLong(KEY_BUNDLE_ID,id);
+            }
+
+            @Override
+            public void onSelectCheckBox() {
+                new UserPreferences(requireContext()).setHabitCountPreference("HABIT_COUNT",1L);
             }
         };
 

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.goat.habits.R;
 import com.goat.habits.databinding.FragmentAchievementsBinding;
+import com.goat.habits.preferences.UserPreferences;
 import com.goat.habits.ui.adapter.AchievementAdapter;
 import com.goat.habits.viewmodel.AchievementViewModel;
 import com.goat.habits.viewmodel.HabitFragmentViewModel;

@@ -20,6 +20,8 @@ public class UserPreferences {
     }
 
     public void setHabitCountPreference(String keyPref, Long habitCount){
+        Long currentCount = getHabitCountPreferences(keyPref);
+        habitCount += currentCount;
         preferences.edit().putLong(keyPref, habitCount).apply();
     }
 
