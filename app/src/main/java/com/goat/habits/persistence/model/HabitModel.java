@@ -23,6 +23,13 @@ public class HabitModel {
         this.startDate = startDate;
     }
 
+    public HabitModel(String name, String description, String frequency, String today) {
+        this.name = name;
+        this.description = description;
+        this.frequency = frequency;
+        this.startDate = today;
+    }
+
     public Long getId() {
         return id;
     }
@@ -61,5 +68,16 @@ public class HabitModel {
 
     public void setStartDate(String startDate) {
         this.startDate = startDate;
+    }
+
+    @Override
+    public String toString() {
+        return "HabitModel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", frequency='" + frequency + '\'' +
+                ", startDate='" + startDate + '\'' +
+                '}';
     }
 }

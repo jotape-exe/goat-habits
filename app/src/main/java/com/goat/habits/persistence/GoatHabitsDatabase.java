@@ -44,7 +44,7 @@ public abstract class GoatHabitsDatabase extends RoomDatabase {
                         @Override
                         public void onCreate(@NonNull SupportSQLiteDatabase db) {
                             super.onCreate(db);
-                            //Seta valores default
+                            //Seta valores default para as conquistas
                             db.execSQL(INSERT_DEFAULT_ACHIEVEMENTS);
                         }
                     })

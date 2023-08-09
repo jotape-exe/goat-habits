@@ -5,14 +5,24 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.goat.habits.databinding.ActivityHabitManagerBinding;
+import com.goat.habits.persistence.model.HabitModel;
 import com.goat.habits.viewmodel.HabitFragmentViewModel;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.List;
 
 public class HabitManagerActivity extends AppCompatActivity {
 
     ActivityHabitManagerBinding binding;
     HabitFragmentViewModel viewModel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +35,21 @@ public class HabitManagerActivity extends AppCompatActivity {
 
         binding.buttonSaveHabit.setOnClickListener(view -> {
             if (fieldsValid()){
-                //viewModel
+                String name =  binding.editNameHabit.getText().toString();
+                String description = binding.editDescriptionHabit.getText().toString();
+//                String frequency = binding.spinnerFrequency.getSelectedItem().toString();
+
+                Date currentDate = new Date();
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                String today = dateFormat.format(currentDate);
+
+                HabitModel habitModel = new HabitModel(name, description, "Diariamente", today);
+
+                viewModel.insert(habitModel);
+                viewModel.findAll();
+
+                Toast.makeText(this, "Salvo com sucesso!", Toast.LENGTH_LONG).show();
+                finish();
             }
         });
 

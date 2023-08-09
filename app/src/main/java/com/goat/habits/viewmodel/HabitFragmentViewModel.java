@@ -25,7 +25,7 @@ public class HabitFragmentViewModel extends AndroidViewModel {
     private final MutableLiveData<List<HabitModel>> mutableHabitList = new MutableLiveData<>();
 
     //Contexto de uso -> Activity
-    private final LiveData<List<HabitModel>> imutableHabitList = mutableHabitList;
+    public LiveData<List<HabitModel>> habitList = mutableHabitList;
 
 
     public void insert(HabitModel habit){
