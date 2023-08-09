@@ -31,12 +31,6 @@ public class HabitViewHolder extends RecyclerView.ViewHolder {
         bind.textFrequencyComponent.setText(habit.getFrequency());
         bind.textStartDate.setText(habit.getStartDate());
 
-        bind.componentHabit.setOnLongClickListener(v -> {
-            listener.onLongClick(habit.getId());
-            Toast.makeText(itemView.getContext(), "Segurou!", Toast.LENGTH_LONG).show();
-            return true;
-        });
-
         bind.imageButtonDelete.setOnClickListener(view -> {
             new AlertDialog.Builder(itemView.getContext())
                     .setTitle("Excluir Hábito")

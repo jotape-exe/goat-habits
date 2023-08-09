@@ -34,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
             if (item.getItemId() == R.id.item_habit){
                 switchFragment(new HabitFragment());
+
             } else if (item.getItemId() == R.id.item_achievements) {
                 switchFragment(new AchievementsFragment());
+
             } else if (item.getItemId() == R.id.item_pomodoro) {
                 switchFragment(new PomodoroFragment());
             }

@@ -18,8 +18,6 @@ import com.goat.habits.viewmodel.HabitFragmentViewModel;
 
 public class HabitFragment extends Fragment {
 
-    public static final String KEY_BUNDLE_ID = "habitId";
-
     private FragmentHabitBinding binding;
     private HabitFragmentViewModel viewModel;
     private HabitAdapter habitAdapter;
@@ -44,12 +42,6 @@ public class HabitFragment extends Fragment {
             public void onDelete(Long id) {
                 viewModel.delete(id);
                 viewModel.findAll();
-            }
-
-            @Override
-            public void onLongClick(Long id) {
-                Bundle bundle = new Bundle();
-                bundle.putLong(KEY_BUNDLE_ID,id);
             }
 
             @Override
