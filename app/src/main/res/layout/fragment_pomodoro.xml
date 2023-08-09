@@ -1,19 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="0dp"
     tools:context=".ui.PomodoroFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pomodoro"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_shape"
+        android:backgroundTint="@color/dark_blue"
+        android:elevation="4dp"
+        android:padding="14dp"
+        android:textColor="@color/white"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <ToggleButton
+        android:id="@+id/toggleOnOf"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/start_pause_button_style"
+        android:backgroundTint="@color/blue"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/icon_stop_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/toggleOnOf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toggleOnOf"
+        app:layout_constraintTop_toTopOf="@+id/toggleOnOf"
+        app:tint="@color/blue" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
