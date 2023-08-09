@@ -56,6 +56,7 @@ public class HabitFragment extends Fragment {
             public void onSelectCheckBox() {
                 new UserPreferences(requireContext()).setHabitCountPreference("HABIT_COUNT",1L);
             }
+
         };
 
         habitAdapter.setListener(listener);

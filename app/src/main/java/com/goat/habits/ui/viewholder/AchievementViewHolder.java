@@ -17,7 +17,6 @@ import java.util.Map;
 public class AchievementViewHolder extends RecyclerView.ViewHolder {
 
     private ComponentAchievementBinding bind;
-    private final String COMUM = "Comum";
     private final String RARO = "Raro";
     private final String ÉPICO = "Épico";
     private final String MONSTRO = "Monstro";
@@ -41,6 +40,7 @@ public class AchievementViewHolder extends RecyclerView.ViewHolder {
 
     }
 
+    //Muda a cor de acordo com a raridade
     private void changeRarity(String type) {
         switch (type) {
             case RARO:
@@ -56,7 +56,7 @@ public class AchievementViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    //Muda o backgroun da conquista se ela for concluida
+    //Muda o background da conquista se ela for concluida
     private void validateAchievement(Long habitCount, String nameAchievement) {
         Map<String, Long> achievementMap = new HashMap<>();
         achievementMap.put("Cbum", 300L);
