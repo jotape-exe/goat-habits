@@ -39,6 +39,5 @@ public class AchievementAdapter extends RecyclerView.Adapter<AchievementViewHold
 
     public void updateList(List<AchievementModel> achievementModelList) {
         achievementList = achievementModelList;
-        notifyDataSetChanged();
     }
 }

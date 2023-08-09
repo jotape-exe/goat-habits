@@ -45,6 +45,9 @@ public class AchievementsFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        viewModel.achievementList.observe(getViewLifecycleOwner(), achievementList -> {
+            adapter.updateList(achievementList);
+        });
         viewModel.findAll();
     }
 }
