@@ -13,11 +13,10 @@ import com.goat.habits.persistence.repository.HabitRepository;
 import java.util.List;
 
 public class HabitFragmentViewModel extends AndroidViewModel {
-    HabitRepository repository;
+    private final HabitRepository repository;
 
     public HabitFragmentViewModel(@NonNull Application application) {
         super(application);
-
         repository = new HabitRepository(application.getApplicationContext());
     }
 

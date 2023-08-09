@@ -1,4 +1,4 @@
-package com.goat.habits;
+package com.goat.habits.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;

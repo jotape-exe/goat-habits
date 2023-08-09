@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".HabitManagerActivity">
+    tools:context=".ui.HabitManagerActivity">
 
     <TextView
 
@@ -35,6 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Digite o nome"
+        android:drawableTint="@color/blue"
+        android:drawableStart="@drawable/icon_name"
+        android:drawablePadding="10dp"
         app:layout_constraintBottom_toTopOf="@id/textDescriptionHabit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,6 +58,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Digite a descrição"
+        android:drawableTint="@color/blue"
+        android:drawableStart="@drawable/icon_name"
+        android:drawablePadding="10dp"
         app:layout_constraintBottom_toTopOf="@id/textFrequency"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

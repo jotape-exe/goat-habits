@@ -24,16 +24,16 @@ public abstract class GoatHabitsDatabase extends RoomDatabase {
     final static int VERSION_1 = 1;
 
     private static final String INSERT_DEFAULT_ACHIEVEMENTS = "INSERT INTO achievements (name, description, type) VALUES " +
-            "('Primeiros passos', 'Conclua 5 Hábitos', 'Comum' )," +
-            "('Iniciante', 'Conclua 10 Hábitos', 'Comum')," +
-            "('Iniciante 2', 'Conclua 20 Hábitos', 'Raro')," +
+            "('Engatinhando', 'Conclua 5 Hábitos', 'Comum' )," +
+            "('Primeiros passos', 'Conclua 10 Hábitos', 'Comum')," +
+            "('Iniciante', 'Conclua 20 Hábitos', 'Raro')," +
             "('Intermediário', 'Conclua 30 Hábitos', 'Raro')," +
-            "('Intermediário 2', 'Conclua 50 Hábitos', 'Raro')," +
-            "('Avançado', 'Conclua 80 Hábitos', 'Épico')," +
-            "('Avançado', 'Conclua 100 Hábitos', 'Épico')," +
+            "('Experiente', 'Conclua 50 Hábitos', 'Raro')," +
+            "('Mestre da rotina', 'Conclua 80 Hábitos', 'Épico')," +
+            "('Poder do Hábito!', 'Conclua 100 Hábitos', 'Épico')," +
             "('Lendário', 'Conclua 150 Hábitos', 'Épico')," +
-            "('Lendário 2', 'Conclua 200 Hábitos', 'Monstro')," +
-            "('Sibam', 'Conclua 300 Hábitos', 'Monstro')";
+            "('Herócio!', 'Conclua 200 Hábitos', 'Monstro')," +
+            "('Cbum', 'Conclua 300 Hábitos', 'Monstro')";
 
 
     public static synchronized GoatHabitsDatabase getDbInstance(Context context){

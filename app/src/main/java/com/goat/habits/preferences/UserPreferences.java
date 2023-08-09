@@ -11,11 +11,20 @@ public class UserPreferences {
         preferences = context.getSharedPreferences("UserPreferences",Context.MODE_PRIVATE);
     }
 
-    public void setPreference(String keyPref, String stringToSave){
+    public void setNamePreference(String keyPref, String stringToSave){
         preferences.edit().putString(keyPref, stringToSave).apply();
     }
 
-    public String getPreferences(String name){
+    public String getNamePreferences(String name){
         return preferences.getString(name, "Seu Nome");
     }
+
+    public void setHabitCountPreference(String keyPref, Long habitCount){
+        preferences.edit().putLong(keyPref, habitCount).apply();
+    }
+
+    public Long getHabitCountPreferences(String key){
+        return preferences.getLong(key,0);
+    }
+
 }

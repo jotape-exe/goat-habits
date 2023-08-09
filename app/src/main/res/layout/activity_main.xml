@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ui.MainActivity"
     tools:openDrawer="start">
 
     <androidx.drawerlayout.widget.DrawerLayout
@@ -54,7 +54,8 @@
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_margin="30dp"
-        android:backgroundTint="@color/blue_v4"
+        android:backgroundTint="@color/blue_v3"
+        app:tint="@color/white"
         android:contentDescription="Add habit"
         android:src="@drawable/icon_add"
         app:layout_constraintBottom_toBottomOf="parent"

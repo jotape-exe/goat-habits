@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/radius_shape"
+    android:backgroundTint="@color/blue_v4"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:padding="10dp"
+    android:layout_height="100dp">
+
+    <TextView
+        android:id="@+id/textTitleAchievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome da conquista"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/textDescriptionAchievement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDescriptionAchievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Descrição conquista"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleAchievement" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerRarityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageStar"
+        app:layout_constraintEnd_toStartOf="@+id/imageStar"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/radius_shape"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintTop_toTopOf="@+id/imageStar">
+
+        <TextView
+            android:id="@+id/textTagAchievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Épico"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imageStar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/icon_stars"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

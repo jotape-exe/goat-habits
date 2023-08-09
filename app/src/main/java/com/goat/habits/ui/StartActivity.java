@@ -1,8 +1,7 @@
-package com.goat.habits;
+package com.goat.habits.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
@@ -28,7 +27,7 @@ public class StartActivity extends AppCompatActivity {
                 binding.editName.setError("Nome não pode estar vazio!");
             } else {
                 Toast.makeText(this, "Salvo com sucesso!", Toast.LENGTH_SHORT).show();
-                new UserPreferences(this).setPreference("NAME", binding.editName.getText().toString());
+                new UserPreferences(this).setNamePreference("NAME", binding.editName.getText().toString());
                 finish();
             }
         });

@@ -13,13 +13,13 @@
         android:theme="@style/Theme.GOATHabits"
         tools:targetApi="31">
         <activity
-            android:name=".HabitManagerActivity"
+            android:name=".ui.HabitManagerActivity"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".ui.StartActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
